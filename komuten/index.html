@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>有限会社たかはし工務店｜川越市・坂戸市・鶴ヶ島市の新築・リフォーム</title>
+<meta name="description" content="埼玉県川越市を拠点に40年。木造注文住宅の新築、リフォーム、水まわり・外壁の修繕まで、自社職人で施工する地域密着の工務店です。見積無料。">
+<style>
+  :root{
+    --navy:#1f3350;
+    --navy-dark:#152238;
+    --blue:#3d6ea5;
+    --accent:#c98a2d;
+    --ink:#2b2f36;
+    --gray:#5d6672;
+    --line:#dde2e8;
+    --bg:#f6f7f9;
+    --white:#ffffff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",YuGothic,"Noto Sans JP",sans-serif;
+    color:var(--ink);background:var(--white);line-height:1.8;font-size:16px;
+    -webkit-text-size-adjust:100%;
+  }
+  h1,h2,h3,.serif{font-family:"Hiragino Mincho ProN","Yu Mincho",YuMincho,"Noto Serif JP",serif;}
+  img,svg{display:block;max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px;}
+
+  /* ---------- header ---------- */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);}
+  .header-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0;}
+  .logo{display:flex;align-items:center;gap:12px;}
+  .logo-mark{
+    width:44px;height:44px;flex:none;background:var(--navy);color:#fff;
+    display:flex;align-items:center;justify-content:center;border-radius:4px;
+  }
+  .logo-mark svg{width:26px;height:26px;}
+  .logo-name{font-size:19px;font-weight:700;letter-spacing:.06em;line-height:1.3;}
+  .logo-sub{font-size:11px;color:var(--gray);letter-spacing:.14em;}
+  nav.main{display:flex;gap:26px;font-size:14px;font-weight:600;}
+  nav.main a{padding:6px 0;border-bottom:2px solid transparent;}
+  nav.main a:hover{border-bottom-color:var(--accent);color:var(--navy);}
+  .header-tel{text-align:right;line-height:1.3;}
+  .header-tel .num{font-size:20px;font-weight:700;color:var(--navy);letter-spacing:.04em;}
+  .header-tel .note{font-size:11px;color:var(--gray);}
+
+  /* ---------- hero ---------- */
+  .hero{
+    background:
+      linear-gradient(115deg, rgba(21,34,56,.93) 0%, rgba(31,51,80,.86) 46%, rgba(31,51,80,.45) 78%, rgba(31,51,80,.30) 100%),
+      repeating-linear-gradient(90deg,#6b5636 0 90px,#755f3c 90px 92px,#634f30 92px 180px),
+      linear-gradient(180deg,#7d6440,#5d4a2e);
+    color:#fff;position:relative;overflow:hidden;
+  }
+  .hero::after{
+    content:"";position:absolute;right:-70px;top:-70px;width:340px;height:340px;border-radius:50%;
+    border:56px solid rgba(255,255,255,.06);
+  }
+  .hero-in{padding:76px 0 84px;position:relative;z-index:1;}
+  .hero .tag{
+    display:inline-block;border:1px solid rgba(255,255,255,.55);border-radius:999px;
+    padding:3px 14px;font-size:12.5px;letter-spacing:.18em;margin-bottom:22px;
+  }
+  .hero h1{font-size:40px;line-height:1.5;font-weight:600;letter-spacing:.04em;max-width:800px;}
+  .hero h1 .hl{color:#f0c26b;}
+  .hero p{margin-top:20px;max-width:560px;color:#e8edf3;font-size:16.5px;}
+  .hero-btns{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:4px;
+    font-weight:700;font-size:15.5px;letter-spacing:.04em;
+  }
+  .btn-accent{background:var(--accent);color:#fff;}
+  .btn-accent:hover{background:#b57a24;}
+  .btn-ghost{border:1.5px solid rgba(255,255,255,.8);color:#fff;}
+  .btn-ghost:hover{background:rgba(255,255,255,.12);}
+  .hero-points{margin-top:44px;display:flex;gap:12px;flex-wrap:wrap;}
+  .hero-points li{
+    list-style:none;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.25);
+    border-radius:4px;padding:8px 16px;font-size:13.5px;
+  }
+  .hero-points li b{color:#f0c26b;}
+
+  /* ---------- sections ---------- */
+  section{padding:76px 0;}
+  section.alt{background:var(--bg);}
+  .sec-head{text-align:center;margin-bottom:44px;}
+  .sec-head .en{font-size:12px;letter-spacing:.34em;color:var(--blue);font-weight:700;text-transform:uppercase;}
+  .sec-head h2{font-size:29px;margin-top:8px;letter-spacing:.05em;color:var(--navy);}
+  .sec-head p{color:var(--gray);margin-top:10px;font-size:15px;}
+
+  /* strengths */
+  .strengths{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .stat{
+    background:#fff;border:1px solid var(--line);border-top:4px solid var(--navy);
+    border-radius:6px;padding:26px 16px;text-align:center;
+  }
+  .stat .big{font-size:37px;font-weight:700;color:var(--navy);line-height:1.2;}
+  .stat .big small{font-size:18px;}
+  .stat .lbl{font-size:13.5px;color:var(--gray);margin-top:6px;}
+  .strength-note{max-width:820px;margin:34px auto 0;color:var(--ink);font-size:15.5px;}
+
+  /* services */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .card{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;}
+  .card .thumb{height:158px;position:relative;}
+  .thumb.t1{background:linear-gradient(140deg,#33527a,#1f3350);}
+  .thumb.t2{background:linear-gradient(140deg,#7d6440,#54432a);}
+  .thumb.t3{background:linear-gradient(140deg,#4f7d8c,#2f4f5c);}
+  .thumb .house{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;}
+  .thumb .house svg{width:96px;height:96px;opacity:.92;}
+  .card .body{padding:22px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1;}
+  .card h3{font-size:19px;color:var(--navy);letter-spacing:.03em;}
+  .card p{font-size:14.5px;color:var(--gray);flex:1;}
+  .price{font-size:14px;font-weight:700;color:var(--ink);border-top:1px dashed var(--line);padding-top:12px;}
+  .price span{color:var(--accent);font-size:17px;}
+
+  /* works */
+  .works{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .work{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;}
+  .work .thumb{height:172px;position:relative;}
+  .thumb.w1{background:linear-gradient(150deg,#8a6b42,#5d4a2e);}
+  .thumb.w2{background:linear-gradient(150deg,#5c7a94,#33506b);}
+  .thumb.w3{background:linear-gradient(150deg,#77775f,#4c4c39);}
+  .work .thumb .label{
+    position:absolute;left:12px;bottom:12px;background:rgba(21,34,56,.82);color:#fff;
+    font-size:12px;padding:3px 10px;border-radius:3px;letter-spacing:.08em;
+  }
+  .work .room{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;}
+  .work .room svg{width:110px;height:110px;opacity:.9;}
+  .work .body{padding:18px 20px 20px;}
+  .work h3{font-size:16.5px;color:var(--navy);}
+  .work p{font-size:13.5px;color:var(--gray);margin-top:6px;}
+  .work .spec{font-size:12px;color:var(--blue);font-weight:700;margin-top:5px;letter-spacing:.02em;}
+  .work .voice{font-size:13px;color:var(--ink);background:var(--bg);border-radius:6px;padding:10px 12px;margin-top:10px;}
+  .work .voice span{display:block;font-size:11.5px;color:var(--gray);margin-top:3px;}
+
+  /* flow */
+  .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:step;}
+  .step{background:#fff;border:1px solid var(--line);border-radius:8px;padding:24px 18px;position:relative;}
+  .step .no{
+    width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:14px;
+  }
+  .step h3{font-size:16.5px;color:var(--navy);margin-bottom:8px;}
+  .step p{font-size:13.5px;color:var(--gray);}
+
+  /* company */
+  .company{display:grid;grid-template-columns:1fr 1.2fr;gap:36px;align-items:start;}
+  .greeting{background:#fff;border:1px solid var(--line);border-radius:8px;padding:28px;}
+  .greeting h3{font-size:20px;color:var(--navy);margin-bottom:14px;}
+  .greeting p{font-size:15px;color:var(--ink);}
+  .greeting .sign{margin-top:18px;font-size:14px;color:var(--gray);text-align:right;}
+  table.profile{width:100%;border-collapse:collapse;background:#fff;font-size:14.5px;}
+  table.profile th,table.profile td{border:1px solid var(--line);padding:12px 16px;text-align:left;vertical-align:top;}
+  table.profile th{background:var(--bg);width:32%;color:var(--navy);font-weight:700;white-space:nowrap;}
+
+  /* contact */
+  .contact{background:var(--navy);color:#fff;text-align:center;}
+  .contact h2{font-size:28px;letter-spacing:.05em;}
+  .contact p{color:#ccd6e2;margin-top:12px;font-size:15.5px;}
+  .contact .tel-big{font-size:42px;font-weight:700;letter-spacing:.05em;margin-top:24px;line-height:1.2;}
+  .contact .tel-note{font-size:13px;color:#aebdd0;}
+  .contact .btn{margin-top:26px;}
+
+  /* mobile cta */
+  .mobile-cta{
+    display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;
+    background:rgba(255,255,255,.97);border-top:1px solid var(--line);
+    padding:10px 14px;gap:10px;
+  }
+  .mobile-cta a{flex:1;text-align:center;padding:13px 8px;border-radius:4px;font-weight:700;font-size:15px;}
+  .mobile-cta .tel{background:var(--navy);color:#fff;}
+  .mobile-cta .form{background:var(--accent);color:#fff;}
+
+  /* footer */
+  footer{background:var(--navy-dark);color:#93a3ba;font-size:13px;padding:30px 0;}
+  .footer-in{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center;}
+  footer .fname{color:#dbe4ee;font-weight:700;font-size:14.5px;}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:900px){
+    .strengths{grid-template-columns:repeat(2,1fr);}
+    .cards,.works{grid-template-columns:1fr 1fr;}
+    .flow{grid-template-columns:1fr 1fr;}
+    .company{grid-template-columns:1fr;}
+    nav.main{display:none;}
+  }
+  @media (max-width:560px){
+    body{font-size:15px;}
+    .hero-in{padding:52px 0 58px;}
+    .hero h1{font-size:29px;}
+    .hero p{font-size:15px;}
+    section{padding:54px 0;}
+    .sec-head h2{font-size:24px;}
+    .cards,.works{grid-template-columns:1fr;}
+    .logo-name{font-size:16.5px;}
+    .header-tel .num{font-size:16px;}
+    .contact .tel-big{font-size:31px;}
+    .btn{padding:13px 20px;font-size:14.5px;}
+    table.profile th{white-space:normal;width:36%;}
+    .mobile-cta{display:flex;}
+    footer{padding-bottom:96px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-in">
+    <a class="logo" href="#top" aria-label="有限会社たかはし工務店 トップへ">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M6 10.5V20h12v-9.5"/><path d="M10 20v-5h4v5"/></svg>
+      </span>
+      <span>
+        <span class="logo-name">有限会社たかはし工務店</span><br>
+        <span class="logo-sub">TAKAHASHI KOMUTEN</span>
+      </span>
+    </a>
+    <nav class="main" aria-label="メインメニュー">
+      <a href="#strength">私たちの強み</a>
+      <a href="#service">事業内容</a>
+      <a href="#works">施工事例</a>
+      <a href="#company">会社概要</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+    <div class="header-tel">
+      <div class="note">お気軽にお電話ください</div>
+      <div class="num">049-000-0000</div>
+    </div>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap hero-in">
+    <span class="tag">川越市・坂戸市・鶴ヶ島市 地域密着の工務店</span>
+    <h1>地元で<span class="hl">40年</span>。<br>木の家づくりと、住まいの困りごとに。</h1>
+    <p>注文住宅の新築から、リフォーム、水まわりや外壁の小さな修繕まで。下請けに丸投げせず、自社の職人が責任を持って施工します。見積りは無料です。</p>
+    <div class="hero-btns">
+      <a class="btn btn-accent" href="#contact">無料で見積りを相談する</a>
+      <a class="btn btn-ghost" href="#works">施工事例を見る</a>
+    </div>
+    <ul class="hero-points">
+      <li>創業 <b>1985年</b></li>
+      <li>施工実績 <b>620棟</b></li>
+      <li>自社職人 <b>8名</b> 在籍</li>
+      <li>見積・現地調査 <b>無料</b></li>
+    </ul>
+  </div>
+</div>
+
+<section id="strength">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="en">Strength</div>
+      <h2>私たちの強み</h2>
+      <p>大きな会社ではありません。その分、一軒ごとに顔の見える仕事をします。</p>
+    </div>
+    <div class="strengths">
+      <div class="stat"><div class="big">620<small>棟</small></div><div class="lbl">新築・リフォームの施工実績</div></div>
+      <div class="stat"><div class="big">40<small>年</small></div><div class="lbl">地域での営業年数</div></div>
+      <div class="stat"><div class="big">8<small>名</small></div><div class="lbl">自社職人（大工・設備・塗装）</div></div>
+      <div class="stat"><div class="big">3<small>市</small></div><div class="lbl">主な対応エリア（周辺地域も相談可）</div></div>
+    </div>
+    <p class="strength-note">
+      たかはし工務店は、川越市で創業した家族経営の工務店です。営業だけの会社とは違い、相談を受けるのも、現場で手を動かすのも、同じ顔ぶれです。「頼んだあと、誰が来るか分からない」という心配がありません。工事のあとも、雨漏りや建具の不具合など、住まいの困りごとがあれば気軽に声をかけてもらえる関係を大切にしています。
+    </p>
+  </div>
+</section>
+
+<section class="alt" id="service">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="en">Service</div>
+      <h2>事業内容</h2>
+      <p>新築から小さな修繕まで。金額の目安を最初にお伝えします。</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="thumb t1">
+          <div class="house" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M6 10.5V20h12v-9.5"/><path d="M10 20v-5.5h4V20"/></svg>
+          </div>
+        </div>
+        <div class="body">
+          <h3>木造注文住宅（新築）</h3>
+          <p>土地探しの相談から設計、施工まで一貫して対応します。間取りは生活の仕方を聞いてから提案。地元の気候に合った断熱・気密の仕様を標準にしています。</p>
+          <div class="price">目安：<span>2,180万円〜</span>（延床30坪・標準仕様）</div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb t2">
+          <div class="house" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/><path d="M5 12v2.5A3.5 3.5 0 0 0 8.5 18h7A3.5 3.5 0 0 0 19 14.5V12"/><path d="M7 21l1-3M17 21l-1-3"/><path d="M6 12V6.5A2.5 2.5 0 0 1 8.5 4h.6A2.4 2.4 0 0 1 11.5 6.4"/></svg>
+          </div>
+        </div>
+        <div class="body">
+          <h3>リフォーム・リノベーション</h3>
+          <p>キッチン・浴室・トイレなどの水まわり、内装、間取り変更、バリアフリー化。住みながらの工事は工程を分けて、生活への影響を抑えます。</p>
+          <div class="price">目安：水まわり <span>38万円〜</span>／内装 <span>30万円〜</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb t3">
+          <div class="house" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3.5" width="11" height="5" rx="1"/><path d="M14 6h3.6a1.4 1.4 0 0 1 1.4 1.4v3.2a1.4 1.4 0 0 1-1.4 1.4H12v2"/><path d="M10.8 14h2.4v6.5h-2.4z"/></svg>
+          </div>
+        </div>
+        <div class="body">
+          <h3>修繕・メンテナンス</h3>
+          <p>雨漏りの調査と補修、外壁・屋根の塗装、建具の調整、網戸の張り替えなど、小さな工事も歓迎します。「こんな小さいこと頼んでいいの？」という内容こそ、まずご相談ください。</p>
+          <div class="price">目安：<span>1.5万円〜</span>（内容により見積り）</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="works">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="en">Works</div>
+      <h2>施工事例</h2>
+      <p>最近の仕事の一部をご紹介します。</p>
+    </div>
+    <div class="works">
+      <article class="work">
+        <div class="thumb w1">
+          <div class="room" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M6 10.5V20h12v-9.5"/><path d="M9.5 20v-6h5v6"/></svg>
+          </div>
+          <span class="label">新築</span>
+        </div>
+        <div class="body">
+          <h3>光を取り込む、吹き抜けのある家</h3>
+          <div class="spec">川越市 S様邸｜木造2階建て・延床32坪｜UA値0.46・C値0.4｜工期4か月</div>
+          <p>南向きの大きな窓と吹き抜けで、冬でも昼間は暖房いらずの明るいリビングになりました。</p>
+          <p class="voice">「昼間は光だけで過ごせる家になりました。子どもがリビングに集まるようになったのが一番うれしいです」<span>― 施主・S様</span></p>
+        </div>
+      </article>
+      <article class="work">
+        <div class="thumb w2">
+          <div class="room" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="9" width="16" height="7" rx="3"/><path d="M6 16v2.5M18 16v2.5"/><path d="M8 9V6.5A2.5 2.5 0 0 1 10.5 4h3A2.5 2.5 0 0 1 16 6.5V9"/></svg>
+          </div>
+          <span class="label">水まわりリフォーム</span>
+        </div>
+        <div class="body">
+          <h3>冬の寒さと決別した、浴室リフォーム</h3>
+          <div class="spec">坂戸市 K様邸｜ユニットバス交換・断熱改修｜工期6日</div>
+          <p>タイル張りの在来浴室をユニットバスへ。断熱材も入れ替え、冬のヒートショック対策をしました。</p>
+          <p class="voice">「お風呂が寒くなくなって、孫と一緒に入るのが楽しみになりました」<span>― 施主・K様</span></p>
+        </div>
+      </article>
+      <article class="work">
+        <div class="thumb w3">
+          <div class="room" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V9.5L12 4l7 5.5V21"/><path d="M5 21h14"/><path d="M12 21v-5"/></svg>
+          </div>
+          <span class="label">外壁・屋根</span>
+        </div>
+        <div class="body">
+          <h3>台風に備えた、外壁と屋根の直し</h3>
+          <div class="spec">鶴ヶ島市 T様邸｜外壁塗装・屋根部分補修｜築18年｜工期12日</div>
+          <p>築18年の外壁塗装と、台風で傷んだ屋根の部分補修。足場の共用で費用を抑えました。</p>
+          <p class="voice">「足場を共用して費用を抑える提案がありがたかったです。仕上がりも近所に褒められました」<span>― 施主・T様</span></p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="flow">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="en">Flow</div>
+      <h2>ご相談から完成まで</h2>
+    </div>
+    <div class="flow">
+      <div class="step">
+        <div class="no">1</div>
+        <h3>ご相談</h3>
+        <p>電話またはお問い合わせから、困りごとをお聞かせください。ざっくりした内容で構いません。</p>
+      </div>
+      <div class="step">
+        <div class="no">2</div>
+        <h3>現地調査・見積り</h3>
+        <p>現場を見て、工事内容と金額の内訳が分かる見積書をお渡しします。ここまでは無料です。</p>
+      </div>
+      <div class="step">
+        <div class="no">3</div>
+        <h3>ご契約・施工</h3>
+        <p>見積りに納得いただいてから契約します。工程と近隣へのあいさつは当社で行います。</p>
+      </div>
+      <div class="step">
+        <div class="no">4</div>
+        <h3>完成・お引き渡し</h3>
+        <p>一緒に仕上がりを確認して引き渡し。その後の不具合や追加の相談も、窓口は変わりません。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="company">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="en">Company</div>
+      <h2>会社概要</h2>
+    </div>
+    <div class="company">
+      <div class="greeting">
+        <h3>代表あいさつ</h3>
+        <p>先代が大工として始めた工務店を、私で二代目になります。この地域で仕事を続けてこられたのは、工事のあとも長く付き合っていただけるお客さまのおかげです。新しい家を建てることも、古くなった家を直すことも、どちらも「その家族が安心して暮らすため」の仕事だと思っています。まずは困りごとを聞かせてください。</p>
+        <div class="sign">代表取締役　高橋 健一</div>
+      </div>
+      <table class="profile">
+        <tr><th>会社名</th><td>有限会社たかはし工務店</td></tr>
+        <tr><th>代表者</th><td>高橋 健一</td></tr>
+        <tr><th>所在地</th><td>〒350-0000　埼玉県川越市〇〇町1-2-3</td></tr>
+        <tr><th>電話番号</th><td>049-000-0000</td></tr>
+        <tr><th>営業時間</th><td>平日 8:00〜17:00（土曜は電話対応のみ）</td></tr>
+        <tr><th>定休日</th><td>日曜・祝日、年末年始</td></tr>
+        <tr><th>創業</th><td>1985年（昭和60年）</td></tr>
+        <tr><th>事業内容</th><td>木造注文住宅の新築、リフォーム、外壁・屋根工事、住まいの修繕全般</td></tr>
+        <tr><th>建設業許可</th><td>埼玉県知事許可（般-○○）第00000号</td></tr>
+        <tr><th>対応エリア</th><td>川越市・坂戸市・鶴ヶ島市を中心に埼玉県西部（その他地域もご相談ください）</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>お問い合わせ</h2>
+    <p>見積り・現地調査は無料です。「まだ決めていないけれど話だけ聞きたい」という方も歓迎します。</p>
+    <div class="tel-big">049-000-0000</div>
+    <div class="tel-note">平日 8:00〜17:00（土曜は電話対応のみ）</div>
+    <br>
+    <a class="btn btn-accent" href="mailto:info@example.co.jp">メールで問い合わせる</a>
+    <p style="margin-top:22px;font-size:13px;">※ このページは制作サンプル（デモ）です。電話番号・住所・メールアドレスは架空のものです。</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-in">
+    <span class="fname">有限会社たかはし工務店</span>
+    <span>〒350-0000 埼玉県川越市〇〇町1-2-3 ／ TEL 049-000-0000</span>
+    <span>© 2026 Takahashi Komuten. ※このサイトはデモ（架空の事業者）です。</span>
+  </div>
+</footer>
+
+<div class="mobile-cta" aria-label="お問い合わせの固定ボタン">
+  <a class="tel" href="tel:0490000000">電話で相談する</a>
+  <a class="form" href="#contact">無料で見積りを相談</a>
+</div>
+
+</body>
+</html>
